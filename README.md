@@ -5,5 +5,6 @@ vue全局注册无抖动刷新 | [code](https://github.com/Givingcode/Work-summa
 ### 二、js部分
 Name | Source Code
 -|-
+时间日期 | [code]()
 获取设备信息 | [code](https://github.com/Givingcode/Work-summary/blob/master/src/js%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BF%A1%E6%81%AF.js)
 ### [三、css部分](https://github.com/Givingcode/Work-summary/blob/master/doc/css-summary.md)
