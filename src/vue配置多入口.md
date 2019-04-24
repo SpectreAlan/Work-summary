@@ -55,7 +55,7 @@
  ```
 ### 二、入口文件修改
 以pc.vue为例，mobile同理
-```
+``` javascript
 import Vue from 'vue'
 import Pc from './pc.vue'
 import router from '../.././router/pc.js'
@@ -69,7 +69,7 @@ new Vue({
 ```
 ### 三、修改utils配置文件
 打开/build/utils.js加入如下内容
-```
+```javascript
 var glob = require('glob')
 // 页面模板
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -124,7 +124,7 @@ exports.htmlPlugin = function() {
 ### 四、修改webpack.dev.conf
 打开/build/webpack.dev.conf.js做如下修改：
 1. 找到 plugins:数组，将如下内容注释或删除
-```
+```javascript
  new HtmlWebpackPlugin({
    filename: 'index.html',
    template: 'index.html',
@@ -133,7 +133,7 @@ exports.htmlPlugin = function() {
 ```
 2. 在plugins数组上拼接上在utils.js内获取到的入口内容
 修改完成以后的plugins如下：
-```
+```javascript
 plugins: [
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
@@ -162,7 +162,7 @@ plugins: [
 ### 修改webpack.prod.conf
 打开/build/webpack.prod.conf做如下修改：
 1. 找到 plugins:数组，将如下内容注释或删除
-```
+```javascript
  new HtmlWebpackPlugin({
    filename: process.env.NODE_ENV === 'testing'
      ? 'index.html'
@@ -185,13 +185,13 @@ plugins: [
 ### 五、添加客户端判断
 客户端访问项目时，通过js判断展示哪个版本
 在pc版本入口pc.html文件内添加如下js
-```
+```javascript
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	window.location.href = '/mobile.html#/'
 }
 ```
 同理，在mobile.html添加如下js
-```
+```javascript
 if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 	window.location.href = '/pc.html#/'
 }
