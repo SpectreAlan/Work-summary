@@ -17,8 +17,10 @@ span {
 ```
 ### 不让鼠标选中文字
 ```css
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
+span{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;\
+}
 ```
