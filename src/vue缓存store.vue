@@ -10,8 +10,8 @@ export default {
   mounted () {
     localStorage.getItem('store') && this.$store.replaceState(Object.assign(this.$store.state, JSON.parse(localStorage.getItem('store'))))
     let event = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0 ? 'pagehide' : 'beforeunload'
-    window.addEventListener(event, function (event) {
-       localStorage.setItem('store', JSON.stringify(this.$store.state))
+    window.addEventListener(event, () => {
+        localStorage.setItem('store', JSON.stringify(this.$store.state))
     })
   }
 }
