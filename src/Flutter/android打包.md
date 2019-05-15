@@ -74,3 +74,7 @@ defaultConfig {
 ```bash
 flutter build apk
 ```
+### 安装到手机
+```
+flutter install .
+```
