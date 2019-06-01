@@ -9,6 +9,7 @@ vue全局注册无抖动刷新 | [code](https://github.com/Givingcode/Work-summa
 配置多入口 | [code](https://github.com/Givingcode/Work-summary/blob/master/src/web%E5%89%8D%E7%AB%AF/vue%E9%85%8D%E7%BD%AE%E5%A4%9A%E5%85%A5%E5%8F%A3.md)
 移动端适配 | [code](https://github.com/Givingcode/Work-summary/blob/master/src/web%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D.md)
 缓存store | [code](https://github.com/Givingcode/Work-summary/blob/master/src/web%E5%89%8D%E7%AB%AF/vue%E7%BC%93%E5%AD%98store.vue)
+ios音乐autoplay | [code](https://github.com/Givingcode/Work-summary/blob/master/src/web%E5%89%8D%E7%AB%AF/ios%E9%9F%B3%E4%B9%90autoplay.md)
 ### 三、JavaScript
 Name | Source Code
 :-:|:-:
