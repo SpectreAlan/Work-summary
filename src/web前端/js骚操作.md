@@ -14,17 +14,18 @@ arr.slice().sort(() => Math.random() - 0.5)
 ### 防抖节流
 
 ```javascript
-function debounce(fun, interval = 3000) {
+function debounce(fn, delay = 300) {
     let timer = null
-    return function () {
-    clearTimeout(timer)
-    timer = setTimeout(function () {
-        fun.call(this, arguments)
-    }, interval)
-    }
+    return () => {
+      let innerArgs = [].slice.call(arguments)
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(this, innerArgs);
+      }, delay);
+    };
 }
-function go() {
-    console.log(111)
+function getClientWidth(){
+    console.log(document.body.clientWidth)
 }
-document.getElementById('btn').onclick = debounce(go, 500)
+window.onresize = debounce(getClientWidth);
 ```
